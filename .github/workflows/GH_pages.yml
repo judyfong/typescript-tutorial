@@ -31,10 +31,11 @@ jobs:
         echo "${ACTIONS_DEPLOY_KEY}" > "${SSH_DIR}/id_rsa"
         chmod 400 "${SSH_DIR}/id_rsa"
         
-        npm run build
         git remote -v
         git remote set-url origin git@github.com:${GITHUB_REPOSITORY}.git
         git remote -v
+        npm run build
+        git commit -am "Built latest version as a GH action"
         git subtree split --prefix public -b gh-pages
         git push -f origin gh-pages:gh-pages
 
