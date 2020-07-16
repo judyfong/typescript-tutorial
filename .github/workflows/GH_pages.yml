@@ -41,6 +41,6 @@ jobs:
         rm .gitignore
         git add public
         git commit -am "GitHub Action's build"
-        git subtree split --prefix build -b gh-pages
+        git subtree split --prefix public -b gh-pages
         git push -f origin gh-pages:gh-pages
 
