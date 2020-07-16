@@ -1,0 +1,11 @@
+{
+    "files": [
+        "src/"
+    ],
+    "scripts": {
+        "deploy": "gh-pages -d dist"
+    },
+    "dependencies": {
+        "typescript": "^3.9.6"
+    }
+}
