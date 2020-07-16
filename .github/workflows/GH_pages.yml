@@ -35,7 +35,6 @@ jobs:
         git remote -v
         git remote set-url origin git@github.com:${GITHUB_REPOSITORY}.git
         git remote -v
-        git commit -am "GitHub Action's build"
         git subtree split --prefix public -b gh-pages
         git push -f origin gh-pages:gh-pages
 
