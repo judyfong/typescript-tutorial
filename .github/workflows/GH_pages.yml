@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - name: Use Node.js 10.x
       uses: actions/setup-node@v1
       with:
@@ -31,7 +31,7 @@ jobs:
         echo "${ACTIONS_DEPLOY_KEY}" > "${SSH_DIR}/id_rsa"
         chmod 400 "${SSH_DIR}/id_rsa"
         
-        git checkout lesson-7
+        npm run build
         git remote -v
         git remote set-url origin git@github.com:${GITHUB_REPOSITORY}.git
         git remote -v
