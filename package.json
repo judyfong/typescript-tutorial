@@ -1,0 +1,12 @@
+{
+    "files": [
+        "src/"
+    ],
+    "scripts": {
+        "build" : "tsc",
+        "deploy": "gh-pages -d dist"
+    },
+    "dependencies": {
+        "typescript": "^3.9.6"
+    }
+}
